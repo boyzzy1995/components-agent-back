@@ -1,0 +1,22 @@
+{
+  "name": "components-agent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node app/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@langchain/core": "^1.1.31",
+    "@langchain/openai": "^1.2.12",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "langchain": "^1.2.30"
+  }
+}
