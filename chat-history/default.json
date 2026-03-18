@@ -1,0 +1,434 @@
+[
+  {
+    "type": "human",
+    "data": {
+      "content": "请你介绍下input组件的基本用法以及它支持哪些参数，回答尽量详细。",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "根据原文内容，Input 输入框的基本用法如下：\n\n**基础用法**\n通过 `v-model` 实现数据的双向绑定。示例代码如下：\n```html\n<fl-input v-model=\"input\" placeholder=\"请输入内容\"></fl-input>\n\n<script>\nexport default {\n  data() {\n    return {\n      input: ''\n    }\n  }\n}\n</script>\n```\n\n**重要说明**\nInput 为受控组件，它**总会显示 Vue 绑定值**。通常情况下，应当处理 `input` 事件，并更新组件的绑定值（或使用`v-model`）。否则，输入框内显示的值将不会改变。该组件不支持 `v-model` 修饰符。\n\nInput 组件支持以下参数（Attributes）：\n\n| 参数 | 说明 | 类型 | 可选值 | 默认值 |\n| :--- | :--- | :--- | :--- | :--- |\n| **placeholder** | 输入框占位文本 | string | — | — |\n| **disabled** | 禁用 | boolean | — | false |\n| **value-key** | 输入建议对象中用于显示的键名 | string | — | value |\n| **value** | 必填值，输入绑定值 | string | — | — |\n| **debounce** | 获取输入建议的去抖延时 | number | — | 300 |\n| **size** | 尺寸 | string | medium / small / mini | — |\n| **type** | 类型 | string | primary / success / warning / danger / info / text | — |\n| **plain** | 是否朴素按钮 | boolean | — | false |\n| **round** | 是否圆角按钮 | boolean | — | false |\n| **circle** | 是否圆形按钮 | boolean | — | false |\n| **maxlength** | 原生属性，最大输入长度 | number | — | — |\n\n此外，`type` 属性还支持设置为 `text`，`textarea` 和其他 [原生 input 的 type 值](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types)，其默认值为 `text`。`value / v-model` 用于绑定值，类型为 string / number。",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你是谁",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文，如果原文中没有相关内容，我会告知您“原文中没有相关内容”。",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好啊",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "你好",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "你好！我是根据您提供的组件库文档内容进行回答的专家。我的回答严格基于您提供的原文。请问有什么可以帮助您的吗？",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "我刚刚发了什么",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "根据我们之前的对话记录，您刚刚发送了内容为“你好”的消息。",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "今天是几号",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "原文中没有相关内容。",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "三体的作者是谁",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "原文中没有相关内容。",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "input",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "根据原文，`Input` 组件是用于通过鼠标或键盘输入字符的输入框。\n\n**核心特性与用法：**\n1.  **基本用法**：通过 `v-model` 实现数据的双向绑定。示例代码如下：\n    ```html\n    <fl-input v-model=\"input\" placeholder=\"请输入内容\"></fl-input>\n    ```\n\n2.  **重要说明**：\n    *   Input 是一个**受控组件**，它**总会显示 Vue 的绑定值**。\n    *   必须处理 `input` 事件并更新绑定值（或直接使用 `v-model`），否则输入框显示的内容不会改变。\n    *   该组件**不支持** `v-model` 修饰符。\n\n**支持的事件（Input Events）：**\n| 事件名称 | 说明 | 回调参数 |\n| :--- | :--- | :--- |\n| `blur` | 在 Input 失去焦点时触发 | `(event: Event)` |\n| `focus` | 在 Input 获得焦点时触发 | `(event: Event)` |\n| `change` | 仅在输入框失去焦点或用户按下回车时触发 | `(value: string \\| number)` |\n| `input` | 在 Input 值改变时触发 | `(value: string \\| number)` |\n| `clear` | 在点击由 `clearable` 属性生成的清空按钮时触发 | — |\n\n**支持的方法（Input Methods）：**\n| 方法名 | 说明 | 参数 |\n| :--- | :--- | :--- |\n| `focus` | 使 input 获取焦点 | — |\n| `blur` | 使 input 失去焦点 | — |\n| `select` | 选中 input 中的文字 | — |\n\n**其他相关功能（根据原文提及）：**\n*   **带输入建议（Autocomplete）**：可以根据输入内容提供对应的输入建议。\n*   **带 Icon 的输入框**：可以通过 `suffix-icon` 属性或 `slot` 在输入框前后添加图标。\n*   **复合型输入框**：可以前置或后置元素，例如与 `Select` 下拉选择器结合使用。",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "介绍一下button组件",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "根据原文，Button 按钮是常用的操作按钮。\n\n### 基础用法\n使用 `type`、`plain`、`round` 和 `circle` 属性来定义 Button 的样式。基础用法示例如下：\n```html\n<fl-row>\n  <fl-button>默认按钮</fl-button>\n  <fl-button type=\"primary\">主要按钮</fl-button>\n  <fl-button type=\"success\">成功按钮</fl-button>\n  <fl-button type=\"info\">信息按钮</fl-button>\n  <fl-button type=\"warning\">警告按钮</fl-button>\n  <fl-button type=\"danger\">危险按钮</fl-button>\n</fl-row>\n```\n\n### 朴素按钮\n使用 `plain` 属性来定义朴素按钮。\n```html\n<fl-row>\n  <fl-button plain>朴素按钮</fl-button>\n  <fl-button type=\"primary\" plain>主要按钮</fl-button>\n  <fl-button type=\"success\" plain>成功按钮</fl-button>\n  <fl-button type=\"info\" plain>信息按钮</fl-button>\n  <fl-button type=\"warning\" plain>警告按钮</fl-button>\n  <fl-button type=\"danger\" plain>危险按钮</fl-button>\n</fl-row>\n```\n\n### 圆角按钮\n使用 `round` 属性来定义圆角按钮。\n```html\n<fl-row>\n  <fl-button round>圆角按钮</fl-button>\n  <fl-button type=\"primary\" round>主要按钮</fl-button>\n  <fl-button type=\"success\" round>成功按钮</fl-button>\n  <fl-button type=\"info\" round>信息按钮</fl-button>\n  <fl-button type=\"warning\" round>警告按钮</fl-button>\n  <fl-button type=\"danger\" round>危险按钮</fl-button>\n</fl-row>\n```\n\n### 禁用状态\n使用 `disabled` 属性来定义按钮是否禁用。\n```html\n<fl-row>\n  <fl-button plain disabled>朴素按钮</fl-button>\n  <fl-button type=\"primary\" plain disabled>主要按钮</fl-button>\n  <fl-button type=\"success\" plain disabled>成功按钮</fl-button>\n  <fl-button type=\"info\" plain disabled>信息按钮</fl-button>\n  <fl-button type=\"warning\" plain disabled>警告按钮</fl-button>\n  <fl-button type=\"danger\" plain disabled>危险按钮</fl-button>\n</fl-row>\n```\n\n### 文字按钮\n没有边框和背景色的按钮，使用 `type=\"text\"` 属性。\n```html\n<fl-button type=\"text\">文字按钮</fl-button>\n<fl-button type=\"text\" disabled>文字按钮</fl-button>\n```\n\n### 图标按钮\n带图标的按钮可增强辨识度或节省空间。设置 `icon` 属性即可，也可以使用 `i` 标签设置在文字右边的 icon。\n```html\n<fl-button type=\"primary\" icon=\"fl-icon-edit\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-share\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-dflete\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-search\">搜索</fl-button>\n<fl-button type=\"primary\">上传<i class=\"fl-icon-upload fl-icon--right\"></i></fl-button>\n```\n\n### 按钮组\n以按钮组的方式出现，常用于多项类似操作。使用 `<fl-button-group>` 标签来嵌套按钮。\n```html\n<fl-button-group>\n  <fl-button type=\"primary\" icon=\"fl-icon-arrow-left\">上一页</fl-button>\n  <fl-button type=\"primary\">下一页<i class=\"fl-icon-arrow-right fl-icon--right\"></i></fl-button>\n</fl-button-group>\n<fl-button-group>\n  <fl-button type=\"primary\" icon=\"fl-icon-edit\"></fl-button>\n  <fl-button type=\"primary\" icon=\"fl-icon-share\"></fl-button>\n  <fl-button type=\"primary\" icon=\"fl-icon-dflete\"></fl-button>\n</fl-button-group>\n```\n\n### 加载中状态\n点击按钮后进行数据加载操作，在按钮上显示加载状态。要设置为 loading 状态，只要设置 `loading` 属性为 `true` 即可。\n```html\n<fl-button type=\"primary\" :loading=\"true\">加载中</fl-button>\n```\n\n### 不同尺寸\nButton 组件提供除了默认值以外的三种尺寸：`medium`、`small`、`mini`，通过设置 `size` 属性来配置它们。\n```html\n<fl-row>\n  <fl-button>默认按钮</fl-button>\n  <fl-button size=\"medium\">中等按钮</fl-button>\n  <fl-button size=\"small\">小型按钮</fl-button>\n  <fl-button size=\"mini\">超小按钮</fl-button>\n</fl-row>\n<fl-row>\n  <fl-button round>默认按钮</fl-button>\n  <fl-button size=\"medium\" round>中等按钮</fl-button>\n  <fl-button size=\"small\" round>小型按钮</fl-button>\n  <fl-button size=\"mini\" round>超小按钮</fl-button>\n</fl-row>\n```\n\n### 按钮防抖\n防止多次点击按钮发送多个请求。可以设置 `dflay` 属性增加点击防抖功能。\n\n### Attributes（属性参数）\n| 参数 | 说明 | 类型 | 可选值 | 默认值 |\n|---------- |-------- |---------- |------------- |-------- |\n| size | 尺寸 | string | medium / small / mini | — |\n| type | 类型 | string | primary / success / warning / danger / info / text | — |\n| plain | 是否朴素按钮 | boolean | — | false |\n| round | 是否圆角按钮 | boolean | — | false |\n| circle | 是否圆形按钮 | boolean | — | false |",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "介绍一下button",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "根据原文，`Button` 按钮是常用的操作按钮。\n\n### 基础用法\n使用 `type`、`plain`、`round` 和 `circle` 属性来定义 Button 的样式。基础用法示例如下：\n```html\n<fl-row>\n  <fl-button>默认按钮</fl-button>\n  <fl-button type=\"primary\">主要按钮</fl-button>\n  <fl-button type=\"success\">成功按钮</fl-button>\n  <fl-button type=\"info\">信息按钮</fl-button>\n  <fl-button type=\"warning\">警告按钮</fl-button>\n  <fl-button type=\"danger\">危险按钮</fl-button>\n</fl-row>\n```\n\n### 朴素按钮\n使用 `plain` 属性来定义朴素按钮。\n```html\n<fl-row>\n  <fl-button plain>朴素按钮</fl-button>\n  <fl-button type=\"primary\" plain>主要按钮</fl-button>\n  <fl-button type=\"success\" plain>成功按钮</fl-button>\n  <fl-button type=\"info\" plain>信息按钮</fl-button>\n  <fl-button type=\"warning\" plain>警告按钮</fl-button>\n  <fl-button type=\"danger\" plain>危险按钮</fl-button>\n</fl-row>\n```\n\n### 圆角按钮\n使用 `round` 属性来定义圆角按钮。\n```html\n<fl-row>\n  <fl-button round>圆角按钮</fl-button>\n  <fl-button type=\"primary\" round>主要按钮</fl-button>\n  <fl-button type=\"success\" round>成功按钮</fl-button>\n  <fl-button type=\"info\" round>信息按钮</fl-button>\n  <fl-button type=\"warning\" round>警告按钮</fl-button>\n  <fl-button type=\"danger\" round>危险按钮</fl-button>\n</fl-row>\n```\n\n### 禁用状态\n使用 `disabled` 属性来定义按钮是否禁用。\n```html\n<fl-row>\n  <fl-button plain disabled>朴素按钮</fl-button>\n  <fl-button type=\"primary\" plain disabled>主要按钮</fl-button>\n  <fl-button type=\"success\" plain disabled>成功按钮</fl-button>\n  <fl-button type=\"info\" plain disabled>信息按钮</fl-button>\n  <fl-button type=\"warning\" plain disabled>警告按钮</fl-button>\n  <fl-button type=\"danger\" plain disabled>危险按钮</fl-button>\n</fl-row>\n```\n\n### 文字按钮\n没有边框和背景色的按钮，使用 `type=\"text\"` 属性。\n```html\n<fl-button type=\"text\">文字按钮</fl-button>\n<fl-button type=\"text\" disabled>文字按钮</fl-button>\n```\n\n### 图标按钮\n带图标的按钮可增强辨识度或节省空间。设置 `icon` 属性即可，也可以使用 `i` 标签设置在文字右边的 icon。\n```html\n<fl-button type=\"primary\" icon=\"fl-icon-edit\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-share\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-dflete\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-search\">搜索</fl-button>\n<fl-button type=\"primary\">上传<i class=\"fl-icon-upload fl-icon--right\"></i></fl-button>\n```\n\n### 按钮组\n以按钮组的方式出现，常用于多项类似操作。使用 `<fl-button-group>` 标签来嵌套按钮。\n```html\n<fl-button-group>\n  <fl-button type=\"primary\" icon=\"fl-icon-arrow-left\">上一页</fl-button>\n  <fl-button type=\"primary\">下一页<i class=\"fl-icon-arrow-right fl-icon--right\"></i></fl-button>\n</fl-button-group>\n<fl-button-group>\n  <fl-button type=\"primary\" icon=\"fl-icon-edit\"></fl-button>\n  <fl-button type=\"primary\" icon=\"fl-icon-share\"></fl-button>\n  <fl-button type=\"primary\" icon=\"fl-icon-dflete\"></fl-button>\n</fl-button-group>\n```\n\n### 加载中状态\n点击按钮后进行数据加载操作，在按钮上显示加载状态。要设置为 loading 状态，只要设置 `loading` 属性为 `true` 即可。\n```html\n<fl-button type=\"primary\" :loading=\"true\">加载中</fl-button>\n```\n\n### 不同尺寸\nButton 组件提供除了默认值以外的三种尺寸：`medium`、`small`、`mini`，通过设置 `size` 属性来配置它们。\n```html\n<fl-row>\n  <fl-button>默认按钮</fl-button>\n  <fl-button size=\"medium\">中等按钮</fl-button>\n  <fl-button size=\"small\">小型按钮</fl-button>\n  <fl-button size=\"mini\">超小按钮</fl-button>\n</fl-row>\n<fl-row>\n  <fl-button round>默认按钮</fl-button>\n  <fl-button size=\"medium\" round>中等按钮</fl-button>\n  <fl-button size=\"small\" round>小型按钮</fl-button>\n  <fl-button size=\"mini\" round>超小按钮</fl-button>\n</fl-row>\n```\n\n### 按钮防抖\n防止多次点击按钮发送多个请求。可以设置 `dflay` 属性增加点击防抖功能。\n\n### Attributes（属性参数）\n| 参数 | 说明 | 类型 | 可选值 | 默认值 |\n|---------- |-------- |---------- |------------- |-------- |\n| size | 尺寸 | string | medium / small / mini | — |\n| type | 类型 | string | primary / success / warning / danger / info / text | — |\n| plain | 是否朴素按钮 | boolean | — | false |\n| round | 是否圆角按钮 | boolean | — | false |\n| circle | 是否圆形按钮 | boolean | — | false |",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "介绍一下button组件",
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "根据原文，`Button` 按钮是常用的操作按钮。\n\n### 基础用法\n使用 `type`、`plain`、`round` 和 `circle` 属性来定义 Button 的样式。基础用法示例如下：\n```html\n<fl-row>\n  <fl-button>默认按钮</fl-button>\n  <fl-button type=\"primary\">主要按钮</fl-button>\n  <fl-button type=\"success\">成功按钮</fl-button>\n  <fl-button type=\"info\">信息按钮</fl-button>\n  <fl-button type=\"warning\">警告按钮</fl-button>\n  <fl-button type=\"danger\">危险按钮</fl-button>\n</fl-row>\n```\n\n### 朴素按钮\n使用 `plain` 属性来定义朴素按钮。\n```html\n<fl-row>\n  <fl-button plain>朴素按钮</fl-button>\n  <fl-button type=\"primary\" plain>主要按钮</fl-button>\n  <fl-button type=\"success\" plain>成功按钮</fl-button>\n  <fl-button type=\"info\" plain>信息按钮</fl-button>\n  <fl-button type=\"warning\" plain>警告按钮</fl-button>\n  <fl-button type=\"danger\" plain>危险按钮</fl-button>\n</fl-row>\n```\n\n### 圆角按钮\n使用 `round` 属性来定义圆角按钮。\n```html\n<fl-row>\n  <fl-button round>圆角按钮</fl-button>\n  <fl-button type=\"primary\" round>主要按钮</fl-button>\n  <fl-button type=\"success\" round>成功按钮</fl-button>\n  <fl-button type=\"info\" round>信息按钮</fl-button>\n  <fl-button type=\"warning\" round>警告按钮</fl-button>\n  <fl-button type=\"danger\" round>危险按钮</fl-button>\n</fl-row>\n```\n\n### 禁用状态\n使用 `disabled` 属性来定义按钮是否禁用。\n```html\n<fl-row>\n  <fl-button plain disabled>朴素按钮</fl-button>\n  <fl-button type=\"primary\" plain disabled>主要按钮</fl-button>\n  <fl-button type=\"success\" plain disabled>成功按钮</fl-button>\n  <fl-button type=\"info\" plain disabled>信息按钮</fl-button>\n  <fl-button type=\"warning\" plain disabled>警告按钮</fl-button>\n  <fl-button type=\"danger\" plain disabled>危险按钮</fl-button>\n</fl-row>\n```\n\n### 文字按钮\n没有边框和背景色的按钮，使用 `type=\"text\"` 属性。\n```html\n<fl-button type=\"text\">文字按钮</fl-button>\n<fl-button type=\"text\" disabled>文字按钮</fl-button>\n```\n\n### 图标按钮\n带图标的按钮可增强辨识度或节省空间。设置 `icon` 属性即可，也可以使用 `i` 标签设置在文字右边的 icon。\n```html\n<fl-button type=\"primary\" icon=\"fl-icon-edit\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-share\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-dflete\"></fl-button>\n<fl-button type=\"primary\" icon=\"fl-icon-search\">搜索</fl-button>\n<fl-button type=\"primary\">上传<i class=\"fl-icon-upload fl-icon--right\"></i></fl-button>\n```\n\n### 按钮组\n以按钮组的方式出现，常用于多项类似操作。使用 `<fl-button-group>` 标签来嵌套按钮。\n```html\n<fl-button-group>\n  <fl-button type=\"primary\" icon=\"fl-icon-arrow-left\">上一页</fl-button>\n  <fl-button type=\"primary\">下一页<i class=\"fl-icon-arrow-right fl-icon--right\"></i></fl-button>\n</fl-button-group>\n<fl-button-group>\n  <fl-button type=\"primary\" icon=\"fl-icon-edit\"></fl-button>\n  <fl-button type=\"primary\" icon=\"fl-icon-share\"></fl-button>\n  <fl-button type=\"primary\" icon=\"fl-icon-dflete\"></fl-button>\n</fl-button-group>\n```\n\n### 加载中状态\n点击按钮后进行数据加载操作，在按钮上显示加载状态。要设置为 loading 状态，只要设置 `loading` 属性为 `true` 即可。\n```html\n<fl-button type=\"primary\" :loading=\"true\">加载中</fl-button>\n```\n\n### 不同尺寸\nButton 组件提供除了默认值以外的三种尺寸：`medium`、`small`、`mini`，通过设置 `size` 属性来配置它们。\n```html\n<fl-row>\n  <fl-button>默认按钮</fl-button>\n  <fl-button size=\"medium\">中等按钮</fl-button>\n  <fl-button size=\"small\">小型按钮</fl-button>\n  <fl-button size=\"mini\">超小按钮</fl-button>\n</fl-row>\n<fl-row>\n  <fl-button round>默认按钮</fl-button>\n  <fl-button size=\"medium\" round>中等按钮</fl-button>\n  <fl-button size=\"small\" round>小型按钮</fl-button>\n  <fl-button size=\"mini\" round>超小按钮</fl-button>\n</fl-row>\n```\n\n### 按钮防抖\n防止多次点击按钮发送多个请求。可以设置 `dflay` 属性增加点击防抖功能。\n\n### Attributes（属性参数）\n| 参数 | 说明 | 类型 | 可选值 | 默认值 |\n|---------- |-------- |---------- |------------- |-------- |\n| size | 尺寸 | string | medium / small / mini | — |\n| type | 类型 | string | primary / success / warning / danger / info / text | — |\n| plain | 是否朴素按钮 | boolean | — | false |\n| round | 是否圆角按钮 | boolean | — | false |\n| circle | 是否圆形按钮 | boolean | — | false |",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "additional_kwargs": {},
+      "response_metadata": {}
+    }
+  }
+]

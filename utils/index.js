@@ -1,3 +1,8 @@
+/**
+ * 工具函数模块
+ * 提供文件读取和自定义聊天历史记录功能
+ */
+
 import { BaseListChatMessageHistory } from "@langchain/core/chat_history";
 import {
   BaseMessage,
@@ -9,6 +14,12 @@ import {
 import fs from 'fs';
 import path from 'path';
 
+/**
+ * 从指定目录读取所有 Markdown 文件内容
+ * @param {string} dirPath - 相对于项目根目录的目录路径
+ * @returns {string[]} 返回所有 .md 文件的内容数组
+ * @throws {Error} 当目录不存在时抛出错误
+ */
 export const readFromMDFiles = (dirPath) => {
   const fullDirPath = path.join(process.cwd(), dirPath);
 
@@ -26,15 +37,34 @@ export const readFromMDFiles = (dirPath) => {
     });
 }
 
+/**
+ * 基于 JSON 文件的聊天历史记录类
+ * 继承自 LangChain 的 BaseListChatMessageHistory，用于持久化存储对话记录
+ */
 export class JSONChatHistory extends BaseListChatMessageHistory {
-  lc_namespace = ["langchain", "store", "messsage"];
+  // LangChain 命名空间，用于序列化识别
+  lc_namespace = ["langchain", "store", "message"];
+  // 会话唯一标识
   sessionId = '';
+  // 存储目录路径
   dir = '';
+
+  /**
+   * 构造函数
+   * @param {Object} fields - 配置对象
+   * @param {string} fields.sessionId - 会话 ID
+   * @param {string} fields.dir - 存储目录路径
+   */
   constructor(fields) {
     super(fields);
     this.sessionId = fields.sessionId;
     this.dir = fields.dir;
   }
+
+  /**
+   * 获取所有历史消息
+   * @returns {Promise<BaseMessage[]>} 消息列表
+   */
   async getMessages() {
     const filePath = path.join(this.dir, `${this.sessionId}.json`);
     try {
@@ -52,34 +82,38 @@ export class JSONChatHistory extends BaseListChatMessageHistory {
     }
   }
 
+  /**
+   * 添加单条消息
+   * @param {BaseMessage} message - 消息对象
+   * @returns {Promise<void>}
+   */
   async addMessage(message) {
     const messages = await this.getMessages();
     messages.push(message);
     await this.saveMessagesToFile(messages);
   }
 
+  /**
+   * 添加多条消息
+   * @param {BaseMessage[]} messages - 消息数组
+   * @returns {Promise<void>}
+   */
   async addMessages(messages) {
     const existingMessages = await this.getMessages();
     const allMessages = existingMessages.concat(messages);
     await this.saveMessagesToFile(allMessages);
   }
-  /*
-    这行代码的作用是序列化聊天消息。
-    在 LangChain 中，聊天消息（如 `HumanMessage`、`AIMessage`）是包含复杂逻辑和属性的对象。
-    当你需要将这些消息保存到文件（如 JSON 文件）中时，不能直接对它们使用 `JSON.stringify`，
-    因为对象可能包含无法直接转为字符串的属性。
 
-    具体作用如下：
-      1.  格式转换：它将 LangChain 的消息对象数组转换为一种通用的、可序列化的存储格式（`StoredMessage` 结构）。
-      2.  提取核心数据：它会提取消息的关键信息（如 `type`: "human"/"ai" 和 `content`: "消息内容"），并将其转化为简单的普通对象。
-      3.  支持持久化：转换后的 `serializedMessages` 是一个简单的对象数组，可以安全地通过 `JSON.stringify` 写入到磁盘上的 JSON 文件中。
-
-    简而言之，它是为了能把内存中的消息对象安全地存入文件系统而进行的“格式预处理”。
-  */
+  /**
+   * 将消息保存到文件
+   * @param {BaseMessage[]} messages - 消息数组
+   * @returns {Promise<void>}
+   */
   async saveMessagesToFile(messages) {
     const filePath = path.join(this.dir, `${this.sessionId}.json`);
     const serializedMessages = mapChatMessagesToStoredMessages(messages);
     try {
+      console.log(`Saving chat history to ${JSON.stringify(serializedMessages, null, 2)}`);
       fs.writeFileSync(filePath, JSON.stringify(serializedMessages, null, 2), {
         encoding: 'utf8',
       });
@@ -88,6 +122,10 @@ export class JSONChatHistory extends BaseListChatMessageHistory {
     }
   }
 
+  /**
+   * 清空历史记录
+   * @returns {Promise<void>}
+   */
   async clear() {
     const filePath = path.join(this.dir, `${this.sessionId}.json`);
     try {
@@ -97,7 +135,12 @@ export class JSONChatHistory extends BaseListChatMessageHistory {
     }
   }
 
-  // 为了兼容旧版本的 BufferMemory，添加已废弃的方法
+  /**
+   * 添加 AI 消息（兼容旧版本 BufferMemory 的废弃方法）
+   * @param {string} message - 消息内容
+   * @returns {Promise<void>}
+   * @deprecated 建议使用 addMessage 方法
+   */
   async addAIChatMessage(message) {
     return this.addMessage(new AIMessage(message));
   }
